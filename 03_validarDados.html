@@ -11,6 +11,36 @@
     */
 
     //ENTRADA
+    let nome= "";
+    let idade= "";
+    let salario= "";
+    let sexo= "";
+    let estadoCivil= "";
+    do{
+        nome= prompt(`digite o seu nome`);
+    }while(nome.length<=3);
+
+    do{
+        idade= Number(prompt(`informe a sua idade`));
+    }while(idade<0 || idade>150);
+
+    do{
+        salario= Number(prompt(`informe o seu salario`));
+    }while(salario<0);
+    
+    do{
+        sexo= prompt(`informe o seu sexo`);
+    }while(sexo!= "f" && sexo!= "m");
+
+    do{
+        estadoCivil= prompt(`informe o seu estado civil`);
+    } while(
+    estadoCivil!= "s"&&
+    estadoCivil!= "n"&&
+    estadoCivil!="v"&&
+    estadoCivil!="d" );
+
+    alert(`tudo certo! todos os dados estão corretos e cadastrados!!`);
 
 
     //PROCESSAMENTO

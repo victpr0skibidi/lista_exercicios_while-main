@@ -6,6 +6,20 @@
     */
 
     //ENTRADA
+    let nomeUsu= "";
+    let senhaUsu= "";
+
+    do{
+        nomeUsu= prompt(`informe o seu nome`);
+        senhaUsu= prompt(`informe a sua senha`);
+        if(senhaUsu===nomeUsu){
+            alert(`ERRO!, informe uma senha que não seja igual ao nome!!`);
+        }
+    } while(senhaUsu===nomeUsu);
+
+        alert(`usuario cadastrado!!`);
+    
+
 
 
     //PROCESSAMENTO
