@@ -6,6 +6,17 @@
     */
 
     //ENTRADA
+    let senhaCorreta= 4928;
+    let senha= "";
+    do{
+        senha= Number(prompt(`informe a senha`));
+        if(senha===senhaCorreta){
+            alert(`Senha correta`);
+        }else{
+            alert(`senha incorreta`);
+        }
+        
+    }while(senha!==senhaCorreta);
 
 
     //PROCESSAMENTO
