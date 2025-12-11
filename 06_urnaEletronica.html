@@ -20,6 +20,80 @@
     */
 
     //ENTRADA
+
+
+    let voto=-1;
+
+    let joaozinho=0;
+    let mariazinha=0;
+    let nulo=0;
+    let branco=0;
+    let totalVotos=0;
+
+    voto=Number(prompt(
+    `As opções são:`+
+    `1. Candidato Joãozinho`+
+    `2. Candidato Mariazinha`+
+    `3. Nulo`+
+    `4. Branco`+
+    `0. Encerrar`+
+    `Entre com o seu voto:`
+));
+while(voto!==0){
+
+    if(voto===1){
+        joaozinho++;
+    }else if(voto===2){
+        mariazinha++;
+    }else if(voto===3){
+        nulo++;
+    }else if(voto===4){
+        branco++;
+    }else{
+        alert(`Empate`);
+        totalVotos--; 
+    }
+
+    totalVotos++;
+
+    voto=Number(prompt(
+        "As opções são:\n"+
+        "1. Candidato Joãozinho\n"+
+        "2. Candidato Mariazinha\n"+
+        "3. Nulo\n"+
+        "4. Branco\n"+
+        "0. Encerrar\n"+
+        "Entre com o seu voto:"
+    ));
+}
+
+let percNulo=(nulo/totalVotos)*100;
+let percBranco=(branco/totalVotos)*100;
+
+let vencedor="";
+if(joaozinho>mariazinha){
+    vencedor=`Joãozinho`;
+}else if(mariazinha>joaozinho){
+    vencedor=`Mariazinha`;
+}else{
+    vencedor=`Empate`;
+}
+
+alert(`
+RESULTADO FINAL:
+
+Votos:
+   - Joãozinho: ${joaozinho}
+   - Mariazinha: ${mariazinha}
+   - Nulos: ${nulo}
+   - Brancos: ${branco}
+
+Porcentagem de votos nulos: ${percNulo.toFixed(2)}%
+
+Porcentagem de votos brancos: ${percBranco.toFixed(2)}%
+
+Candidato vencedor: ${vencedor}
+`);
     
 
 

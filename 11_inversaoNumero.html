@@ -8,8 +8,16 @@
     */
 
     //ENTRADA
-    
-    
+    let numero= Number(prompt(`digite um numero:`));
+    let invertido= 0;
+
+
+    while(numero > 0) {
+        let ultimoDigito= numero % 10;
+        invertido= invertido * 10 + ultimoDigito;
+        numero= Math.floor(numero / 10);
+    }
+alert(`numero invertido: ${invertido}`);
 
     
 
